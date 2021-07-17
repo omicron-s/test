@@ -144,14 +144,14 @@ if (insta) {
     $(this).text(money.format(number));
   });
 }
-/* Button preventDefault */
+/* Button-Buy */
 
 
-$('.product-card__buy').on('click', function (e) {
-  e.preventDefault();
-});
-$('.product-card__bonus').on('click', function (e) {
-  e.preventDefault();
+$('.product-card__buy').on('click', function () {
+  var btn = $(this),
+      span = $(this).children('span');
+  btn.toggleClass('active');
+  btn.hasClass('active') ? span.text('В корзине') : span.text('В корзину');
 });
 
 /***/ }),
